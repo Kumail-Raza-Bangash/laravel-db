@@ -66,6 +66,7 @@ class PostSeeder extends Seeder
         //     ]);
         // });
         // Video 19 --
+        
 
         // Post::create([
         //     'title' => 'Post One',

@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use App\Models\Post;
 use Database\Seeders\PostSeeder;
+use Database\Seeders\UserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,6 +25,9 @@ class DatabaseSeeder extends Seeder
 
         // Post::factory(count:5)->create();
 
-        $this->call(class: PostSeeder::class);
+        $this->call([
+            PostSeeder::class,
+            UserSeeder::class,
+        ]);
     }
 }
