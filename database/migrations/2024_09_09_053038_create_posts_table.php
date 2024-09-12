@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('excerpt')->comment('Summary of the post');
             $table->longText('description');
-            $table->boolean('is_published')->default(false);
+            $table->boolean('is_published')->default(false); 
             $table->integer('min_to_read')->nullable(false);
 
             $table->timestamps();
