@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id()->from(100);
 
+            $table->foreignId('user_id')
+                ->constrained(table:'users')
+                ->cascadeOnDelete();
+
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->text('excerpt')->comment('Summary of the post');
